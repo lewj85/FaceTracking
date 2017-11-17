@@ -67,11 +67,11 @@ void detectAndDisplay( Mat frame )
         //    circle( frame, eye_center, radius, Scalar( 255, 0, 0 ), 4, 8, 0 );
         //}
 		//-- Create a target on the forehead, between the eyes of each face
-		for ( size_t k = 0; k < 2*eyes.size(); k++ )
+		for ( size_t k = 0; k < eyes.size()/2; ++k )
         {
 			left_eye_x = (eyes[k].x + eyes[k].width/2)
 			left_eye_y = (eyes[k].y + eyes[k].height/2)
-			k++;
+			++k;
 			right_eye_x = (eyes[k].x + eyes[k].width/2)
 			right_eye_y = (eyes[k].y + eyes[k].height/2)
 			//Point between_eyes( faces[i].x + (left_eye_x + right_eye_x)/2, faces[i].y + (left_eye_y + right_eye_y)/2 );
